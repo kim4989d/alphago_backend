@@ -17,7 +17,7 @@ public class CommonCmd   extends CommandFactory{
 public CommonCmd() {
 	logger.info("CommonCmds");
 
-	setNextPage("uploadajax");
+	//setNextPage("uploadajax");
 }
 	
 	@Override

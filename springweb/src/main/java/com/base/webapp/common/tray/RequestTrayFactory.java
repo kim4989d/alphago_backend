@@ -33,7 +33,8 @@ public class RequestTrayFactory extends CommonTrayFactory {
 		
 		
 		
-			logger.debug("key:"+name+"\t"+values+"\n");
+			
+		System.out.println("key:"+name+"\t value:"+values[0]+"\n");
 		}
 		return addCookiesToTray(request, tray);
 	}

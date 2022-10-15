@@ -50,9 +50,9 @@ public class BaseCommand  implements Command {
 				 * String pass="kim21541";
 				 */  
 			   
-			   String url="jdbc:mysql://localhost:3306/gwang_1";
-			   String id="gwang_1";
-			   String pass="gwang_1";
+			   String url="jdbc:mysql://localhost:3306/question";
+			   String id="kim4989d";
+			   String pass="toqurrlck7!";
 			   
 			   
 			   connection=DriverManager.getConnection(url,id,pass);

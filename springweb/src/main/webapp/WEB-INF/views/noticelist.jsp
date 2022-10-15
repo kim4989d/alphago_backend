@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-<%@ include file="common/common.jsp"%>
+<%@ include file="/common/common.jsp"%>
+
+
+<%
+
+	tray1.get("1");
+%>
 <html>
 <head>
 <title>사용자_게시판_공지사항</title>
