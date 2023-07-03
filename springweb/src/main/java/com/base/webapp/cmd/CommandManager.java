@@ -25,9 +25,6 @@ public class CommandManager {
 		map.put("autocoding/autoindex","com.base.webapp.cmd.CommonCmd");
 		
 		
-		
-		
-		
 		map.put("question/questionmain",          "com.base.webapp.cmd.QuestionMainCmd");  
 		map.put("question/questionmainnext",          "com.base.webapp.cmd.QuestionMainNextCmd");
 		

@@ -58,20 +58,16 @@ public class QuestionDao extends BaseDao {
 
 		StringBuffer bu = new StringBuffer();
 
-		
-		
 		bu.append(
 				"insert into questionpool(questionid,questionsubject,questioncaseradio,questionpoint,questionpointresult,questioncorrect,questionflag)values");
-		bu.append("(:questionid,:questionsubject,:questioncaseradio,:questionpoint,:questionpointresult,:questioncorrect,'N')");
-		
+		bu.append(
+				"(:questionid,:questionsubject,:questioncaseradio,:questionpoint,:questionpointresult,:questioncorrect,'N')");
+
 		queryRunner = new QueryRunner("public void QuestionInsert(Connection connection ,Tray tray )", bu.toString(),
 				tray);
 		queryRunner.update(connection);
 	}
 
-
-	
-	
 	public void QuestionMainInsert(Connection connection, Tray tray) {
 
 		QueryRunner queryRunner = null;
@@ -80,17 +76,12 @@ public class QuestionDao extends BaseDao {
 
 		StringBuffer bu = new StringBuffer();
 
-		
-		
-		bu.append(
-				"insert into questionpool(questionname,questionphone,questionreply,questionflag)values");
+		bu.append("insert into questionpool(questionname,questionphone,questionreply,questionflag)values");
 		bu.append("(:questionname,:questionphone,:questionreply,'Y')");
 
-		queryRunner = new QueryRunner("public void QuestionMainInsert(Connection connection ,Tray tray )", bu.toString(),
-				tray);
+		queryRunner = new QueryRunner("public void QuestionMainInsert(Connection connection ,Tray tray )",
+				bu.toString(), tray);
 		queryRunner.update(connection);
 	}
-
-
 
 }

@@ -9,18 +9,16 @@
 <%
 ResultSetTray tray = null;
 if (request.getAttribute("rsTray") != null)
-	
+
 {
 	tray = (ResultSetTray) request.getAttribute("rsTray");
 }
 
-String questionname = CommonUtil.IsNull(request,"questionname");
-String questionphone = CommonUtil.IsNull(request,"questionphone");
+String questionname = CommonUtil.IsNull(request, "questionname");
+String questionphone = CommonUtil.IsNull(request, "questionphone");
 
-System.out.println("view:"+questionname);
-System.out.println("view:"+questionphone);
-
-
+System.out.println("view:" + questionname);
+System.out.println("view:" + questionphone);
 %>
 
 
@@ -44,13 +42,14 @@ System.out.println("view:"+questionphone);
 </head>
 <body>
 	<form name="questionmain">
-		<input type="hidden" name="questionname" value=<%=questionname%> /> 
-		<input type="hidden" name="questionphone" value=<%=questionphone%> />
+		<input type="hidden" name="questionname" value=<%=questionname%> /> <input
+			type="hidden" name="questionphone" value=<%=questionphone%> />
 
 		<table border="1" style="width: 100%">
 
 			<%
-			for (int i = 0; i < tray.getRowCount(); i++) {
+			if (request.getAttribute("rsTray") != null) {
+				for (int i = 0; i < tray.getRowCount(); i++) {
 			%>
 
 			<tr>
@@ -61,6 +60,7 @@ System.out.println("view:"+questionphone);
 				<td><%=CommonUtil.QuestionRadio(tray.get("questionid", i), tray.get("questioncaseradio", i))%></td>
 			</tr>
 			<%
+				}
 			}
 			%>
 
@@ -68,7 +68,7 @@ System.out.println("view:"+questionphone);
 			<tr>
 				<td><input type="button" value="next" onclick="QuestionNext()" /></td>
 			</tr>
-			
+
 		</table>
 
 	</form>
