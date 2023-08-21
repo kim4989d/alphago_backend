@@ -15,7 +15,7 @@ public class TestCmd extends CommandFactory{
 	
 	
 public TestCmd() {
-	logger.info("BoardCmd");
+	logger.info("TestCmd");
 
 	setNextPage("test");
 }
@@ -31,16 +31,12 @@ public TestCmd() {
 		ResultSetTray checkoptiontray     = null;
 		
 		try {
-			/*
-			 * TestDao dao = new TestDao(); rsTray=dao.List(getConnection(), reqTray);
-			 * 
-			 * for (int i = 0; i < rsTray.getRowCount(); i++) {
-			 * 
-			 * logger.info("row:"+rsTray.get("userid",i)+"\n");
-			 * 
-			 * logger.info("row:"+rsTray.get("passwd",i)+"\n"); }
-			 */
-		
+	
+				TestDao dao=new TestDao();
+				rsTray =dao.List(getConnection(), reqTray);
+			
+			
+			
 		} catch (Exception ex) {
 				ex.printStackTrace();
 			}

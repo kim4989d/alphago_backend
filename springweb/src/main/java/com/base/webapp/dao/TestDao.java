@@ -29,8 +29,8 @@ public class TestDao extends BaseDao{
 //			query.append("from TBL_COMPANY 								 \n");
 //			query.append("order by company_id 							 \n");		
 			
-			query.append(" from  test ");
-			queryRunner = new QueryRunner("BoardDao List(Connection conn,Tray reqTray)",query.toString(), reqTray); 
+			query.append(" from  rest ");
+			queryRunner = new QueryRunner(this.getClass().getName(),query.toString(), reqTray); 
 			try {
 				rsTray = (ResultSetTray)queryRunner.query(conn);
 			} catch (Exception e) {

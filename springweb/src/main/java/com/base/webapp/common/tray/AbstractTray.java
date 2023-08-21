@@ -15,41 +15,16 @@ public abstract class AbstractTray implements Tray {
 	private static String[] EMPTY_STRING_ARRAY = new String[0];
 
 	protected Map map = new TreeMap();
-	public String test = "테스트 입니다 ";
-	public String test2 = "테스트 입니다 ===========";
-	public String test3 = "테스트 입니다333333333333333333333333 ===========";
 
-	public String getTest3() {
-		return test3;
-	}
-
-	public void setTest3(String test3) {
-		this.test3 = test3;
-	}
-
-	public String getTest2() {
-		return test2;
-	}
-
-	public void setTest2(String test2) {
-		this.test2 = test2;
-	}
-
+	
 	public Map getMap() {
 		return map;
 	}
 
-	public void setMap(Map map) {
-		this.map = map;
-	}
+//	public void setMap(Map map) {
+//		this.map = map;
+//	}
 
-	public String getTest() {
-		return test;
-	}
-
-	public void setTest(String test) {
-		this.test = test;
-	}
 
 	public String[] getKeys() {
 		int iSize = map.size();

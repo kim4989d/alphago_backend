@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
@@ -32,6 +33,8 @@ public class HomeController extends BaseController {
 	/* restful */
 	@Override
 	@ResponseBody
+	//@CrossOrigin(origins = "http://localhost:8080")
+
 	public ResultSetTray DoRestService(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 
