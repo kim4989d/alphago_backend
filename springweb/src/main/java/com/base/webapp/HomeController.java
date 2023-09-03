@@ -33,7 +33,7 @@ public class HomeController extends BaseController {
 	/* restful */
 	@Override
 	@ResponseBody
-	//@CrossOrigin(origins = "http://localhost:8080")
+	// @CrossOrigin(origins = "http://localhost:8080")
 
 	public ResultSetTray DoRestService(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
@@ -51,6 +51,26 @@ public class HomeController extends BaseController {
 
 		return tray;
 
+	}
+
+	/*
+	 * crawling method 1.0
+	 * 
+	 */
+	@Override
+	public ModelAndView CrawLingUpService(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, Exception {
+
+		ModelAndView model = new ModelAndView();
+		
+		reqtray = getRequestTray(request);
+		command = createCommand(reqtray.getString("cmd"));
+		
+		ResultSetTray tray = command.execute(reqtray, request, response);
+		System.out.println(tray.toJSONString());
+		
+		model.setViewName(reqtray.getString("cmd"));
+		return model;
 	}
 
 	@Override
@@ -94,9 +114,9 @@ public class HomeController extends BaseController {
 //		model.setViewName("html/"+reqtray.getString("cmd"));
 		model.setViewName(reqtray.getString("cmd"));
 
-		//model.addObject("tray", tray);
+		// model.addObject("tray", tray);
 		request.setAttribute("tray1", tray);
-		
+
 		// model.setv
 		logger.info("test");
 

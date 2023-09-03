@@ -21,7 +21,8 @@ public class CommandManager {
 		
 		
 		
-		
+		map.put("crawling/crawlingindex","com.base.webapp.cmd.CrawCommandCmd");
+			
 		map.put("autocoding/autoindex","com.base.webapp.cmd.CommonCmd");
 		
 		

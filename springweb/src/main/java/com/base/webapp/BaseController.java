@@ -272,6 +272,16 @@ public class BaseController implements ServletContextAware, ApplicationContextAw
 		return null;
 	}
 
+
+	@RequestMapping(value = "/crawling")
+	public ModelAndView CrawLingUpService(HttpServletRequest multipartrequest, HttpServletResponse response)
+			throws ServletException, Exception {
+
+		return null;
+	}
+
+	
+	
 	@ResponseBody
 	@RequestMapping(value = "/ajaxupload", method = RequestMethod.POST)
 	public String fileUpload(@RequestParam("article_file") List<MultipartFile> multipartFile,
